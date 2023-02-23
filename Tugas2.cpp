@@ -15,7 +15,7 @@ int* fibo(int n){
 }
 
 int main(){
-	int num, *ptr; 
+	int num, *ptr; //pointer dari variabel fibo
 	cout << "Banyak deret fibonacci: ";
 	cin >> num;
 	ptr = fibo(num);

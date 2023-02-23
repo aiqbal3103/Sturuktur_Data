@@ -4,7 +4,7 @@
 using namespace std;
 
 struct Data_Mahasiswa {
-    string nama, NIM, email;
+    string nama, NIM, angkatan;
 };
 
 int Jumlah_mhs;
@@ -20,13 +20,13 @@ void Menambahkan_Data() {
     cout << "MASUKKAN DATA\n" << endl;
     for(int i = 0; i < Jumlah_mhs; i++) {
         cout << "Data Mahasiswa ke - " << i+1 << endl;
-		getline (cin,mhs[i].nama);
-		cout << "Nama  \t: ";
+	getline (cin,mhs[i].nama);
+	cout << "Nama  \t: ";
         cout << "NIM   \t: "; 
         getline (cin,mhs[i].NIM);
         cout << "Angkatan : "; 
-		getline (cin,mhs[i].angkatan);
-        cout << endl;
+	getline (cin,mhs[i].angkatan);
+       	cout << endl;
     }
 }
 
@@ -86,9 +86,9 @@ int main() {
             case 2:
                 Menampilkan_Data();
                 break;
-			case 3:
-				Menghapus_Data();
-				break;
+	    case 3:
+		Menghapus_Data();
+		break;
             case 4:
                 keluar = true;
                 cout << "Terima Kasih!" << endl;

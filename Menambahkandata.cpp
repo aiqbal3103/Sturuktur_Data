@@ -14,14 +14,18 @@ void Menambahkan_Data() {
     cout << "Banyak Mahasiswa yang ingin ditambah datanya: "; 
     cin >> Jumlah_mhs;
     cout << endl;
+    cin.ignore();
     mhs = new Data_Mahasiswa[Jumlah_mhs];
     cout << "==============================\n" << endl;
     cout << "MASUKKAN DATA\n" << endl;
     for(int i = 0; i < Jumlah_mhs; i++) {
         cout << "Data Mahasiswa ke - " << i+1 << endl;
-        cout << "Nama  \t: "; cin >> mhs[i].nama;
-        cout << "NIM   \t: "; cin >> mhs[i].NIM;
-        cout << "Email \t: "; cin >> mhs[i].email;
+		getline (cin,mhs[i].nama);
+		cout << "Nama  \t: ";
+        cout << "NIM   \t: "; 
+        getline (cin,mhs[i].NIM);
+        cout << "Angkatan : "; 
+		getline (cin,mhs[i].angkatan);
         cout << endl;
     }
 }
@@ -74,7 +78,7 @@ int main() {
         cout << "4. Keluar" << endl;
         cout << "PILIH MENU: ";
         cin >> MainMenu;
-
+	cin.ignore();
         switch (MainMenu) {
             case 1:
                 Menambahkan_Data();
